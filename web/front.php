@@ -10,15 +10,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing;
 
-function render_template($request)
-{
-    extract($request->attributes->all(), EXTR_SKIP);
-    ob_start();
-    include sprintf(FRAMEWORK_ROOT.'/src/pages/%s.php', $_route);
-
-    return new Response(ob_get_clean());
-}
-
 $request = Request::createFromGlobals();
 $routes = include FRAMEWORK_ROOT.'/src/app.php';
 
