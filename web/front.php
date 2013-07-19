@@ -4,7 +4,7 @@
 
 define(FRAMEWORK_ROOT, dirname(__DIR__));
 
-require_once FRAMEWORK_ROOT.'/src/autoload.php';
+require_once FRAMEWORK_ROOT.'/vendor/autoload.php';
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
