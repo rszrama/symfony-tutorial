@@ -15,7 +15,7 @@ function is_leap_year($year = null) {
 
 class LeapYearController
 {
-    public function indexAction($request)
+    static function indexAction($request)
     {
         if (is_leap_year($request->attributes->get('year'))) {
             return new Response('Yep, this is a leap year!');
@@ -28,7 +28,7 @@ class LeapYearController
 $routes = new Routing\RouteCollection();
 $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', array(
     'year' => null,
-    '_controller' => array(new LeapYearController(), 'indexAction'),
+    '_controller' => 'LeapYearController::indexAction',
 )));
 
 return $routes;
