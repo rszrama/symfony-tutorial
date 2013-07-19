@@ -1,6 +1,6 @@
 <?php
 
-// framework/front.php
+// example.com/web/front.php
 
 define(FRAMEWORK_ROOT, dirname(__DIR__));
 
