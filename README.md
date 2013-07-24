@@ -15,7 +15,7 @@ even though the method name specified is not static.
 3. It then prepares a RequestContext object for use by a UrlMatcher object that
 can match the path of the current request to one of our routes. It also prepares
 a ControllerResolver object that can convert the 'ClassName::methodName'
-callable format to the array($obj, 'methodName), allowing routes to identify
+callable format to the array($obj, 'methodName'), allowing routes to identify
 non-static methods as controllers.
 4. The try block first populates the request attributes ParameterBag with the
 parameters of the matching route: year, _controller, and _route.
