@@ -2,7 +2,7 @@
 
 // example.com/web/front.php
 
-define(FRAMEWORK_ROOT, dirname(__DIR__));
+define('FRAMEWORK_ROOT', dirname(__DIR__));
 
 require_once FRAMEWORK_ROOT.'/vendor/autoload.php';
 
